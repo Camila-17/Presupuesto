@@ -17,16 +17,15 @@ const Modal = ({ closeModal, nuevoGasto }) => {
 
                 <div className='titleCloseBtn'>
                     <button onClick={() => closeModal(false)}> X </button>
-
                 </div>
                 <div className='title'>
-                    <h1>Formulario Presupuestos</h1>
+                    <h1 className='titleH1'>Agregar Gasto</h1>
                 </div>
 
                 <div className='body'>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div>
-                            <label>Nombre de Gasto</label>
+                            <h3>Nombre de Gasto</h3>
                             <input type="text" {...register('nombre_gasto', {
                                 required: true,
                                 maxLength: 10
@@ -34,14 +33,14 @@ const Modal = ({ closeModal, nuevoGasto }) => {
                             {/* {errors.nombre_del_gastos?.type==='required'&& <p>campo del gasto requerido </p>} */}
                         </div>
                         <div>
-                            <label>Cantidad de Presupuesto</label>
+                            <h3>Cantidad de Gasto</h3>
                             <input type="text" {...register('cantidad de presupuesto', {
                                 required: true,
                                 maxLength: 10
                             })} />
                         </div>
                         <div>
-                            <label>Tipo de Gasto</label>
+                            <h3>Categoria</h3>
                             <select {...register('tipo_gasto')}>
 
                                 <option value=""></option>
@@ -55,8 +54,8 @@ const Modal = ({ closeModal, nuevoGasto }) => {
                             </select>
                         </div>
                         <div className='footer'>
-                            <button onClick={() => closeModal(false)} >Cancelar</button>
-                            <button type='submit' value='Enviar'>Enviar</button>
+                            {/* <button onClick={() => closeModal(false)} >Cancelar</button> */}
+                            <button className='boton' type='submit' value='Enviar'><span>Agregar Gasto</span></button>
                         </div>
 
                     </form>
