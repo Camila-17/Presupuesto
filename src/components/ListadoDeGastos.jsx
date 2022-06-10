@@ -3,6 +3,7 @@ import MiGasto from './MiGasto';
 
 const ListadoDeGastos = ({ gastos }) => {
     return (
+        
         <div>
             <h2>
                 {gastos.length ? "Lista Gastos" : "No hay gastos"}
@@ -13,7 +14,6 @@ const ListadoDeGastos = ({ gastos }) => {
                     gastando={gastando}
                 />
             ))}
-
         </div>
     )
 }
