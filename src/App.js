@@ -10,7 +10,7 @@ import ListadoDeGastos from './components/ListadoDeGastos';
 
 
 function App() {
-  const [presupuesto, setPresupuesto] = useState([]);
+  const [presupuesto, setPresupuesto] = useState(0);
   const [irPresupuestoTotal, setIrPresupuestoTotal] = useState(false);
   const [abrirModal, setAbrirModal] = useState(false)
   const [gastos, setGastos] = useState([]);
@@ -38,7 +38,7 @@ function App() {
             />
           </div>
         </>) :
-        (<Grafica />) && (<IngresoPresupuesto
+        (<IngresoPresupuesto
           presupuesto={presupuesto}
           setPresupuesto={setPresupuesto}
           irPresupuestoTotal={irPresupuestoTotal}

@@ -2,22 +2,21 @@ import React from 'react'
 //import torta from '../components/img/torta.png';
 //import { Pie } from 'react-chartjs-2';
 export const PresupuestoTotal = ({ presupuesto }) => {
-   /*  const data=(
-        dataSets[{
-            data:[presupuesto]
-        }]
-    ) */
+    const { montoIngresado } = presupuesto;
+    /*  const data=(
+         dataSets[{
+             data:[presupuesto]
+         }]
+     ) */
 
-    const opcion={
+    const opcion = {
         responsive: true
     }
     return (
         <>
             <div className='muestra'>
                 <div className='tituloPresupuesto'>
-                    <p>
-                        Total presupuesto: col {presupuesto}
-                    </p>
+                    <p>{`Presupuesto: col ${montoIngresado}`}</p>
                     <p>
                         Disponible: col 0
                     </p>
@@ -26,7 +25,7 @@ export const PresupuestoTotal = ({ presupuesto }) => {
                     </p>
 
                 </div>
-               {/*  <div className='imagen'>
+                {/*  <div className='imagen'>
                      <Pie data={data}  options={opcion}/>
                 </div> */}
             </div>

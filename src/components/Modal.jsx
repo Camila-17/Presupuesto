@@ -35,7 +35,7 @@ const Modal = ({ closeModal, nuevoGasto }) => {
                         </div>
                         <div>
                             <label>Cantidad de Presupuesto</label>
-                            <input type="text" {...register('cantidad de presupuesto', {
+                            <input type="text" {...register('cantidad_presupuesto', {
                                 required: true,
                                 maxLength: 10
                             })} />
