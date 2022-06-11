@@ -35,6 +35,9 @@ function App() {
           <div>
             <PresupuestoTotal
               presupuesto={presupuesto}
+              abrirModal={abrirModal}
+              setAbrirModal={setAbrirModal}
+              gastos={gastos}
             />
           </div>
         </>) :
@@ -45,11 +48,11 @@ function App() {
           setIrPresupuestoTotal={setIrPresupuestoTotal}
         />)}
 
-      {irPresupuestoTotal && (
+      {/* {irPresupuestoTotal && (
         <div className="adicionar-gasto">
           <button className='openModal' onClick={() => { setAbrirModal(true) }}>Enviar</button>
         </div>
-      )}
+      )} */}
     </div>
   );
 
