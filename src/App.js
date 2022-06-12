@@ -17,6 +17,7 @@ function App() {
   const [gastos, setGastos] = useState([]);
   const [disponible, setDisponible] = useState(0);
   const [gastado, setGastado] = useState(0);
+  const [calcularPorcentaje, setCalcularPorcentaje] = useState(100);
 
   const nuevoGasto = (gasto) => {
     setGastos([...gastos, gasto])
@@ -34,6 +35,8 @@ function App() {
         setDisponible={setDisponible}
         gastado={gastado}
         setGastado={setGastado}
+        calcularPorcentaje={calcularPorcentaje}
+        setCalcularPorcentaje={setCalcularPorcentaje}
       />
       {abrirModal && (<Modal nuevoGasto={nuevoGasto} closeModal={setAbrirModal} />)}
       {irPresupuestoTotal ? (
@@ -48,7 +51,7 @@ function App() {
               gastos={gastos}
               disponible={disponible}
               gastado={gastado}
-
+              calcularPorcentaje={calcularPorcentaje}
             />
           </div>
         </>) :

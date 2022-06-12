@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 
-const CalcularPresupuesto = ({ presupuesto, gastos, setDisponible, setGastado }) => {
+const CalcularPresupuesto = ({ presupuesto, gastos, disponible, setDisponible, setGastado, setCalcularPorcentaje }) => {
 
     const { cantidad_presupuesto } = gastos
     const { montoIngresado } = presupuesto;
@@ -18,6 +18,12 @@ const CalcularPresupuesto = ({ presupuesto, gastos, setDisponible, setGastado })
                 setDisponible(datoIngresado - presupuestoGastado)
             )
         }
+        {
+            presupuestoGastado == 0 ? (setCalcularPorcentaje(100)) : (
+                setCalcularPorcentaje(((datoIngresado - presupuestoGastado) / datoIngresado) * 100)
+            )
+        }
+
 
         setGastado(presupuestoGastado);
 
