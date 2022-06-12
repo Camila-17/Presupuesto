@@ -9,7 +9,7 @@ const ListImag = () => {
 
     return (
         <div>
-            <img src={Imagenes[0].img} />
+            <img src={Imagenes[1].img} />
         </div>
     )
 }
