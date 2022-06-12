@@ -2,11 +2,14 @@ import React from 'react'
 import torta from '../components/img/torta.png';
 import { GASTOS } from '../constans';
 import '../Style/PresupuestoTotal.css'
+import { CircularProgressbar } from 'react-circular-progressbar';
+import "react-circular-progressbar/dist/styles.css"
 import ListadoDeGastos from './ListadoDeGastos';
+
 //import { Pie } from 'react-chartjs-2';
 
 
-export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTotal, gastos, disponible, gastado }) => {
+export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTotal, gastos, disponible, gastado, calcularPorcentaje }) => {
     const { montoIngresado } = presupuesto;
 
     const opcion = {
@@ -19,7 +22,9 @@ export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTota
 
                 <div className='tituloPresupuesto'>
                     <div className="torta">
-                        <img src={torta} alt="" />
+                        <div style={{ width: 200, height: 200 }}>
+                            <CircularProgressbar value={calcularPorcentaje} />
+                        </div>
                     </div>
                     <div className="planificador">
                         <h5>Total Presupuesto:</h5>
