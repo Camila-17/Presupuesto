@@ -2,6 +2,7 @@ import React from 'react';
 import '../Style/Modal.css';
 import { useForm } from 'react-hook-form';
 import { GASTOS } from '../constans';
+import ListadoDeGastos from './ListadoDeGastos';
 
 const Modal = ({ closeModal, nuevoGasto }) => {
     const { register, formState: { errors }, handleSubmit } = useForm()
@@ -47,9 +48,12 @@ const Modal = ({ closeModal, nuevoGasto }) => {
                                 {GASTOS.map(gasto => (
                                     <option
                                         key={gasto.id}
-                                        value={gasto.nombre}  >
+                                        value={[gasto.nombre,
+                                        gasto.imagen
+                                        ]}
+                                        >
                                         {gasto.nombre}
-                                       
+                                        
                                     </option>
                                 ))}
                             </select>

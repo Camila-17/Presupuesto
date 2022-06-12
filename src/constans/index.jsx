@@ -1,6 +1,13 @@
+///import Imagenes from '../components/img/Imagenes'
+import plus from '../components/img/plus.jpg'
+
 
 export const GASTOS = [
-    { id: 1, nombre: "Alimentacion"},
+    {   id: 1,
+        nombre:"Alimentacion",
+        imagen: ""
+    },
+
     { id: 2, nombre: "Salud" },
     { id: 3, nombre: "Netflix" },
     { id: 4, nombre: "Ahorro" },
