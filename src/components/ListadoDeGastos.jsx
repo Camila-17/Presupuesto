@@ -12,15 +12,13 @@ const ListadoDeGastos = ({ gastos}) => {
             <h2>
                 {gastos.length ? "Lista Gastos" : "No hay gastos"}
             </h2>
-            {gastos.map((gastando, index,imagenes) => (
+            {gastos.map((gastando, index) => (
             
                 <MiGasto
                     key={index}
-                    gastando={gastando}
-                    
+                    gastando={gastando}  
                 />
             ))}
-            
             
         </div>
          

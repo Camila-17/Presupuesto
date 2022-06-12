@@ -1,5 +1,5 @@
 import React from 'react';
-import Array from '../components/expenselist/Array'
+
 
 
 const MiGasto = ({ gastando}) => {
