@@ -20,12 +20,14 @@ const ListadoDeGastos = ({ gastos}) => {
             </h2>
             {gastos.map((gastando, index) => (
             
-                <>  <MiGasto
-                    key={index.id}
-                    gastando={gastando} />
-                   <ListImag
-                    
-                    />
+                <>  
+                    <MiGasto
+                        key={index.id}
+                        gastando={gastando} />
+                    <ListImag
+                        
+
+                        />
                 </>
             ))}
              

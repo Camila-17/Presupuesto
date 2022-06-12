@@ -1,5 +1,4 @@
 
-
 export const GASTOS = [
     { id: 1, nombre: "Alimentacion"},
     { id: 2, nombre: "Salud" },
