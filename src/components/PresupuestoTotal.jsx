@@ -9,14 +9,6 @@ import ListadoDeGastos from './ListadoDeGastos';
 export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTotal, gastos, disponible, gastado }) => {
     const { montoIngresado } = presupuesto;
 
-
-
-    /*  const data=(
-         dataSets[{
-             data:[presupuesto]
-         }]
-     ) */
-
     const opcion = {
         responsive: true
     }
@@ -53,9 +45,7 @@ export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTota
                         />
                     </div>
                 )}
-                {/*  <div className='imagen'>
-                     <Pie data={data}  options={opcion}/>
-                </div> */}
+              
             </div>
         </>
     )
