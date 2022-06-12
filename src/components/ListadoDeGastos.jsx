@@ -4,7 +4,12 @@ import MiGasto from './MiGasto';
 
 
 
+
+
+
 const ListadoDeGastos = ({ gastos}) => {
+    
+
     return (
         
         <div>
@@ -14,12 +19,12 @@ const ListadoDeGastos = ({ gastos}) => {
             </h2>
             {gastos.map((gastando, index) => (
             
-                <MiGasto
-                    key={index}
-                    gastando={gastando}  
-                />
+                <>  <MiGasto
+                    key={index.id}
+                    gastando={gastando} />
+                    
+                </>
             ))}
-            
         </div>
          
        

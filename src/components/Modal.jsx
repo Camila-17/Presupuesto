@@ -49,6 +49,7 @@ const Modal = ({ closeModal, nuevoGasto }) => {
                                         key={gasto.id}
                                         value={gasto.nombre}  >
                                         {gasto.nombre}
+                                       
                                     </option>
                                 ))}
                             </select>
@@ -57,7 +58,6 @@ const Modal = ({ closeModal, nuevoGasto }) => {
                             {/* <button onClick={() => closeModal(false)} >Cancelar</button> */}
                             <button className='boton' type='submit' value='Enviar'><span>Agregar Gasto</span></button>
                         </div>
-
                     </form>
                 </div>
             </div>

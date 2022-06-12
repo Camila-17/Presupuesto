@@ -1,10 +1,13 @@
-import React from 'react'
-import {AiFillCar} from 'react-icons/ai'
+import React from 'react';
 
-const ListImag = (text) => {
+
+const ListImag = (props) => {
+
     return (
         <div>
-            <p>{<AiFillCar/>}</p>
+           
+            <img src={props.img} />
+            
         </div>
     )
 }
