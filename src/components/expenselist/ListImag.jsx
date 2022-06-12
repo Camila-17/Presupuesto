@@ -1,13 +1,12 @@
 import React from 'react';
+import Imagenes from '../img/Imagenes';
+import { useState } from 'react';
 
-
-const ListImag = (props) => {
+const ListImag = () => {
 
     return (
         <div>
-           
-            <img src={props.img} />
-            
+            <img src={Imagenes[0].img} />
         </div>
     )
 }

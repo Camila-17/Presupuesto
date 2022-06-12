@@ -1,6 +1,7 @@
 import React from 'react';
 import SeeExpense from './expenselist/SeeExpense';
 import MiGasto from './MiGasto';
+import ListImag from './expenselist/ListImag';
 
 
 
@@ -22,9 +23,12 @@ const ListadoDeGastos = ({ gastos}) => {
                 <>  <MiGasto
                     key={index.id}
                     gastando={gastando} />
+                   <ListImag
                     
+                    />
                 </>
             ))}
+             
         </div>
          
        
