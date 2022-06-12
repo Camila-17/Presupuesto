@@ -6,8 +6,11 @@ import ListadoDeGastos from './ListadoDeGastos';
 //import { Pie } from 'react-chartjs-2';
 
 
-export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTotal, gastos }) => {
+export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTotal, gastos, disponible, gastado }) => {
     const { montoIngresado } = presupuesto;
+
+
+
     /*  const data=(
          dataSets[{
              data:[presupuesto]
@@ -33,11 +36,11 @@ export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTota
                         <h5>
                             Disponible:
                         </h5>
-                        <p>0</p>
+                        <p>{disponible}</p>
                         <h5>
                             Gastado:
                         </h5>
-                        <p>0</p>
+                        <p>{gastado}</p>
                     </div>
                 </div>
                 <div className="buttonAgregar">

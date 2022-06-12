@@ -2,9 +2,9 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 export const IngresoPresupuesto = ({ presupuesto, setPresupuesto, setIrPresupuestoTotal }) => {
-     const { register, handleSubmit, formState: { errors }, reset, trigger } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset, trigger } = useForm();
     const onSubmit = (data) => {
-        //parseInt(data);
+
         setPresupuesto(data);
         console.log(data);
         setIrPresupuestoTotal(true)
