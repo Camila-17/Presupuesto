@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import './App.css';
 import Grafica from './components/Grafica';
 import Header from './components/Header';
@@ -7,6 +7,7 @@ import PresupuestoTotal from './components/PresupuestoTotal';
 //import plus from './components/img/plus.jpg';
 import Modal from './components/Modal';
 import ListadoDeGastos from './components/ListadoDeGastos';
+
 
 
 function App() {
@@ -45,8 +46,6 @@ function App() {
           irPresupuestoTotal={irPresupuestoTotal}
           setIrPresupuestoTotal={setIrPresupuestoTotal}
         />)}
-
-
     </div>
   );
 

@@ -1,6 +1,8 @@
 import React from 'react';
+import Array from '../components/expenselist/Array'
 
-const MiGasto = ({ gastando }) => {
+
+const MiGasto = ({ gastando}) => {
     return (
         <div>
             <p> {gastando.tipo_gasto} </p>
