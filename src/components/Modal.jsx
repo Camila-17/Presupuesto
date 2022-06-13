@@ -3,6 +3,7 @@ import '../Style/Modal.css';
 import { useForm } from 'react-hook-form';
 import { GASTOS } from '../constans';
 import ListadoDeGastos from './ListadoDeGastos';
+import Imagenes from './img/Imagenes';
 
 const Modal = ({ closeModal, nuevoGasto }) => {
     const { register, formState: { errors }, handleSubmit } = useForm()
@@ -27,7 +28,7 @@ const Modal = ({ closeModal, nuevoGasto }) => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div>
                             <h3>Nombre de Gasto</h3>
-                            <input type="text" {...register('nombre_gasto', {
+                            <input type="text" ruturut {...register('nombre_gasto', {
                                 required: true,
                                 maxLength: 10
                             })} />
@@ -48,9 +49,7 @@ const Modal = ({ closeModal, nuevoGasto }) => {
                                 {GASTOS.map(gasto => (
                                     <option
                                         key={gasto.id}
-                                        value={[gasto.nombre,
-                                        gasto.imagen
-                                        ]}
+                                        value={gasto.nombre}
                                         >
                                         {gasto.nombre}
                                         

@@ -8,8 +8,7 @@ const MiGasto = ({ gastando}) => {
         <div>
             <p> {gastando.tipo_gasto} </p>
             <p> {gastando.nombre_gasto}</p>
-            <p> {gastando.cantidad_presupuesto}</p>
-            
+            <p> {gastando.cantidad_presupuesto}</p> 
         </div>
     )
 }

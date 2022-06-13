@@ -23,11 +23,13 @@ const ListadoDeGastos = ({ gastos}) => {
                 <>  
                     <MiGasto
                         key={index.id}
-                        gastando={gastando} />
+                        gastando={gastando} 
+                        
+                        />
                     <ListImag
                         
 
-                        />
+                    />
                         
                 </>
             ))}
