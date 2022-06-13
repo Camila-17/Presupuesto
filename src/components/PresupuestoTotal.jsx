@@ -2,7 +2,7 @@ import React from 'react'
 import torta from '../components/img/torta.png';
 import { GASTOS } from '../constans';
 import '../Style/PresupuestoTotal.css'
-import { CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import "react-circular-progressbar/dist/styles.css"
 import ListadoDeGastos from './ListadoDeGastos';
 
@@ -13,16 +13,6 @@ export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTota
     const { montoIngresado } = presupuesto;
 
 
-
-    /*  const data=(
-         dataSets[{
-             data:[presupuesto]
-         }]
-     ) */
-
-    const opcion = {
-        responsive: true
-    }
     return (
         <>
             <div className='muestra'>
@@ -31,7 +21,19 @@ export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTota
                 <div className='tituloPresupuesto'>
                     <div className="torta">
                         <div style={{ width: 200, height: 200 }}>
-                            <CircularProgressbar value={calcularPorcentaje} />
+                            <CircularProgressbar
+                                value={calcularPorcentaje}
+                                text={`${calcularPorcentaje.toFixed(0)}% Gastado`}
+                                background
+                                backgroundPadding={6}
+                                styles={buildStyles({
+                                    backgroundColor: "#00966B",
+                                    textColor: "#fff",
+                                    pathColor: "#fff",
+                                    trailColor: "transparent",
+                                    textSize: '11px'
+                                })}
+                            />
                         </div>
                     </div>
                     <div className="planificador">
@@ -61,9 +63,7 @@ export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTota
                         />
                     </div>
                 )}
-                {/*  <div className='imagen'>
-                     <Pie data={data}  options={opcion}/>
-                </div> */}
+
             </div>
         </>
     )
