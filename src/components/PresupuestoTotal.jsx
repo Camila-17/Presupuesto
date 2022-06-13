@@ -48,8 +48,11 @@ export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTota
                         <p>{gastado}</p>
                     </div>
                 </div>
-                <div className="buttonAgregar">
-                    <button className='openModal' onClick={() => { setAbrirModal(true) }}><span>Agregar Gasto</span></button>
+                <div className="botones">
+                    <div className="buttonAgregar">
+                        <button className='openModal' onClick={() => { setAbrirModal(true) }}><span>Agregar Gasto</span></button>
+                    </div>
+                    <div className="resetApp"><button disabled="disabled">resetApp</button></div>
                 </div>
                 {irPresupuestoTotal && (
                     <div>

@@ -1,28 +1,38 @@
-.muestra{
-        width: 1000px;
-        height: 1656px;
-        justify-content: center;
-        align-items: center;
-        background:linear-gradient(50deg,black,white,black);
-        background-size: 100% 400%;
-        margin: auto;
-
+.muestra {
+    width: 1000px;
+    height: 1656px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(50deg, black, white, black);
+    background-size: 100% 400%;
+    margin: auto;
 }
-.tituloPresupuesto{
-    width: 70%;
+
+.muestra h1 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.tituloPresupuesto {
+    width: 60%;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     background: green;
     margin-left: 14%;
     border-radius: 20px;
     background: white;
+    margin: auto;
 }
-h1{
-    color:white;
+
+.muestra h1 {
+    color: white;
     text-align: center;
     padding: 20px;
 }
+
 .planificador {
     flex-direction: column;
     align-items: flex-start;
@@ -30,29 +40,50 @@ h1{
     display: flex;
     padding: 15px;
 
-    
+
 }
-.torta img{
+
+.torta img {
     width: 300px;
     height: 300px;
     padding: 20px;
 }
-.buttonAgregar button{
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 465px;
-        height: 45px;
-        margin: 20px;
-        margin-left: 14%;
-        border: none;
-        background: #00966B;
-        color: black;
-        border-radius: 8px;
-        font-size: 20px;
-        font-family: 'Inter', sans-serif;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 50px;
-        overflow: hidden;
+
+.botones {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+}
+
+.buttonAgregar button {
+    justify-content: center;
+    width: 365px;
+    height: 45px;
+    margin: 20px;
+    border: none;
+    background: #00966B;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.resetApp button {
+    justify-content: center;
+    width: 200px;
+    height: 45px;
+    margin: 20px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 import MiGasto from './MiGasto';
+import '../Style/ListaGastos.css'
 
 const ListadoDeGastos = ({ gastos }) => {
     return (
         
-        <div>
+        <div className='listaGastos'>
             <h2>
                 {gastos.length ? "Lista Gastos" : "No hay gastos"}
             </h2>
