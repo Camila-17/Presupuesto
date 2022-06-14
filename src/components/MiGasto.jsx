@@ -4,7 +4,7 @@ import imagenSalud from '../components/img/logoComida.jpeg';
 
 
 
-
+//bibloteca para mostrar las imagenes en la card
 const selectImagenes = {
     Alimentacion: imagenAlimento,
     Salud: imagenSalud,
@@ -30,21 +30,16 @@ const selectFecha = {
     // Hogar: "13/06/2022"
 }
 
-const reducer = (state,action) =>{
-    switch (action.type) {
-        case 'FILTE_TODOS': return 
-    }
-}
+
 
 const MiGasto = ({ gastando}) => {
 
-    const onFilterText =(e: ChangeEvent<HTMLInputElement>)=> {
-    }
-
+    
     return (
+
         <>
             <div>
-                <div className="foto"> <h6>Foto</h6>
+                <div className="foto"> 
                     <img src={selectImagenes[gastando.tipo_gasto]} alt="foto-gastos" />
                 </div>
                 <p> {gastando.tipo_gasto} </p>

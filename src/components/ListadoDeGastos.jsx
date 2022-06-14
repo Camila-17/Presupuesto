@@ -1,16 +1,17 @@
 import React from 'react';
 import MiGasto from './MiGasto';
-
+import { useState } from 'react';
 
 const ListadoDeGastos = ({ gastos}) => {
+
+
     
 
     return (
         
-        <div>
-            <div>
-                <input placeholder='Searchs' />
-            </div>
+        <div className='todolist'>
+           
+
             <h2>
                 {gastos.length ? "Lista Gastos" : "No hay gastos"}
             </h2>
