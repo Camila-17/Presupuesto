@@ -5,7 +5,8 @@ import '../Style/ListaGastos.css'
 const ListadoDeGastos = ({ gastos }) => {
     return (
         
-        <div className='listaGastos'>
+        <>
+            <div className='listaGastos'>
             <h2>
                 {gastos.length ? "Lista Gastos" : "No hay gastos"}
             </h2>
@@ -16,6 +17,10 @@ const ListadoDeGastos = ({ gastos }) => {
                 />
             ))}
         </div>
+        
+        </>
+        
+        
     )
 }
 
