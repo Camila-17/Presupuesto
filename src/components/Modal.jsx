@@ -3,7 +3,7 @@ import '../Style/Modal.css';
 import { useForm } from 'react-hook-form';
 import { GASTOS } from '../constans';
 import ListadoDeGastos from './ListadoDeGastos';
-import Imagenes from './img/Imagenes';
+
 
 const Modal = ({ closeModal, nuevoGasto }) => {
     const { register, formState: { errors }, handleSubmit } = useForm()
