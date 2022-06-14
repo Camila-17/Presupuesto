@@ -38,32 +38,29 @@ const reducer = (state,action) =>{
 
 const MiGasto = ({ gastando}) => {
 
-    const onFilterText =(e: ChangeEvent<HTMLInputElement>) {
+    const onFilterText =(e: ChangeEvent<HTMLInputElement>)=> {
     }
 
     return (
-        <div>
+        <>
             <div>
-                <input
-                onChange={onFilterText} 
-                placeholder='Search' className='SearchInput'/>
-            </div>
+                <div className="foto"> <h6>Foto</h6>
+                    <img src={selectImagenes[gastando.tipo_gasto]} alt="foto-gastos" />
+                </div>
+                <p> {gastando.tipo_gasto} </p>
+                <div className="cantidadCategoria">
+                    <h6>Categoria</h6>
+                    <h4> {gastando.tipo_gasto} </h4>
+                    <h6>Fecha</h6>
+                    <h6>{`${selectFecha[gastando.tipo_gasto]}`}</h6>
+                </div >
+                <div className="total">
+                    <h5> $ {gastando.cantidad_presupuesto}</h5>
+                </div>
 
-            <div className="foto"> <h6>Foto</h6>
-                <img src={selectImagenes[gastando.tipo_gasto]} alt="foto-gastos" />
             </div>
-            <p> {gastando.tipo_gasto} </p>
-            <div className="cantidadCategoria">
-                <h6>Categoria</h6>
-                <h4> {gastando.tipo_gasto} </h4>
-                <h6>Fecha</h6>
-                <h6>{`${selectFecha[gastando.tipo_gasto]}`}</h6>
-            </div >
-            <div className="total">
-                <h5> $ {gastando.cantidad_presupuesto}</h5>
-            </div>
-
-        </div>
+        </>
+        
     )
 }
 

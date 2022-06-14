@@ -8,6 +8,9 @@ const ListadoDeGastos = ({ gastos}) => {
     return (
         
         <div>
+            <div>
+                <input placeholder='Searchs' />
+            </div>
             <h2>
                 {gastos.length ? "Lista Gastos" : "No hay gastos"}
             </h2>
