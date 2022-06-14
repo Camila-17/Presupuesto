@@ -29,7 +29,7 @@ const CalcularPresupuesto = ({ presupuesto, gastos, disponible, setDisponible, s
 
     }, [gastos])
     return (
-        <div>Calcular presupuesto</div>
+        <div></div>
     )
 }
 

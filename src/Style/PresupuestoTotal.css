@@ -1,9 +1,7 @@
 .muestra {
     width: 1000px;
-    height: 1656px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(50deg, black, white, black);
     background-size: 100% 400%;
     margin: auto;
 }
@@ -11,36 +9,44 @@
 .muestra h1 {
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     margin: auto;
 }
 
 .tituloPresupuesto {
-    width: 60%;
+    width: 65%;
+    height: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background: green;
     margin-left: 14%;
     border-radius: 20px;
-    background: white;
+    background: #F9F2EC;
     margin: auto;
 }
 
-.muestra h1 {
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
+
 
 .planificador {
     flex-direction: column;
     align-items: flex-start;
-    font-size: 30px;
     display: flex;
     padding: 15px;
+    font-size: 30px;
+    gap: 8px;
+    
+}
 
+h5{
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
 
+p{
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
 }
 
 .torta img {
@@ -54,11 +60,12 @@
     width: 60%;
     margin: auto;
     justify-content: center;
+
 }
 
 .buttonAgregar button {
     justify-content: center;
-    width: 365px;
+    width: 415px;
     height: 45px;
     margin: 20px;
     border: none;
@@ -70,13 +77,19 @@
     font-weight: bold;
     cursor: pointer;
     border-radius: 50px;
+
+}
+
+.buttonAgregar :hover{
+    background: #76f5d1;
+    color: rgb(32, 31, 31);
 }
 
 .resetApp button {
     justify-content: center;
     width: 200px;
     height: 45px;
-    margin: 20px;
+    margin: 20px ;
     border: none;
     background: red;
     color: white;
@@ -86,4 +99,9 @@
     font-weight: bold;
     cursor: pointer;
     border-radius: 50px;
+}
+
+.resetApp :hover{
+    background: #e8ed5d;
+    color: rgb(32, 31, 31);
 }

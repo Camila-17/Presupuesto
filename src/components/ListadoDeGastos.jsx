@@ -6,9 +6,9 @@ const ListadoDeGastos = ({ gastos }) => {
     return (
         
         <div className='listaGastos'>
-            <h2>
-                {gastos.length ? "Lista Gastos" : "No hay gastos"}
-            </h2>
+            <h1>
+                {gastos.length ? "Lista Gastos" : "No hay Gastos"}
+            </h1>
             {gastos.map((gastando, index) => (
                 <MiGasto
                     key={index}
