@@ -1,5 +1,7 @@
 import React from 'react';
-import '../Style/MiGasto.css'
+import '../Style/MiGasto.css';
+import { LeadingActions, SwipeableList, SwipeableListItem, SwipeAction, TrailingActions, } from 'react-swipeable-list';
+import 'react-swipeable-list/dist/styles.css';
 
 import imagenAlimento from './img/icono_alimento.png';
 import imagenSalud from './img/icono_educacion.png';
@@ -37,25 +39,50 @@ const selectFecha = {
     Hogar: "13/06/2022"
 }
 
-const MiGasto = ({ gastando }) => {
-    return (
-        <div className='miGasto'>
-            <div className="gastos">
-                <div className="foto"> <h6>Foto</h6>
-                    <img src={selectImagenes[gastando.tipo_gasto]} alt="foto-gastos" />
-                </div>
-                <div className="cantidadCategoria">
-                    <h6>Categoria</h6>
-                    <h4> {gastando.tipo_gasto} </h4>
-                    <h6>Fecha</h6>
-                    <h6>{`${selectFecha[gastando.tipo_gasto]}`}</h6>
-                </div >
 
-                <div className="total">
-                    <h5> $ {gastando.cantidad_presupuesto}</h5>
+
+const MiGasto = ({ gastando, setEditar, gastoEliminado }) => {
+
+    const leadingActions = () => (
+        <LeadingActions>
+            <SwipeAction onClick={() =>
+                setEditar({ gastando })}>
+                Editar
+            </SwipeAction>
+        </LeadingActions>
+    )
+    const trailingActions = () => (
+        <TrailingActions>
+            <SwipeAction onClick={() => gastoEliminado(gastando.idUnica)}>
+                Eliminando
+            </SwipeAction>
+        </TrailingActions>
+    )
+    return (
+        <SwipeableList>
+            <SwipeableListItem
+                leadingActions={leadingActions()}
+                trailingActions={trailingActions()}
+            >
+                <div className='miGasto'>
+                    <div className="gastos">
+                        <div className="foto"> <h6>Foto</h6>
+                            <img src={selectImagenes[gastando.tipo_gasto]} alt="foto-gastos" />
+                        </div>
+                        <div className="cantidadCategoria">
+                            <h6>Categoria</h6>
+                            <h4> {gastando.tipo_gasto} </h4>
+                            <h6>Fecha</h6>
+                            <h6>{`${selectFecha[gastando.tipo_gasto]}`}</h6>
+                        </div >
+
+                        <div className="total">
+                            <h5> $ {gastando.cantidad_presupuesto}</h5>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </SwipeableListItem>
+        </SwipeableList>
     )
 }
 

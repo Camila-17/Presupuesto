@@ -9,7 +9,8 @@ import ListadoDeGastos from './ListadoDeGastos';
 //import { Pie } from 'react-chartjs-2';
 
 
-export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTotal, gastos, disponible, gastado, calcularPorcentaje }) => {
+export const PresupuestoTotal = ({ presupuesto, setAbrirModal,
+    irPresupuestoTotal, gastos, disponible, gastado, calcularPorcentaje, setEditar, gastoEliminado }) => {
     const { montoIngresado } = presupuesto;
 
 
@@ -60,6 +61,9 @@ export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTota
                     <div>
                         <ListadoDeGastos
                             gastos={gastos}
+                            setEditar={setEditar}
+                            gastoEliminado={gastoEliminado}
+
                         />
                     </div>
                 )}
