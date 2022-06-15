@@ -12,8 +12,7 @@ import ListadoDeGastos from './ListadoDeGastos';
 
 export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTotal, gastos, disponible, gastado, calcularPorcentaje }) => {
     const { montoIngresado } = presupuesto;
-
-
+    
     return (
         <>
             <div className='muestra'>
@@ -38,7 +37,7 @@ export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTota
                     </div>
                     <div className="planificador">
                         <h5>Total Presupuesto:</h5>
-                        <p>${montoIngresado}</p>
+                        <p>${(montoIngresado)}</p>
 
                         <h5>
                             Disponible:

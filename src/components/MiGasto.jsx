@@ -10,7 +10,7 @@ import imagenVacaciones from './img/icono_vacaciones.png';
 import imagenEducacion from './img/icono_educacion.png';
 import imagenServicios from './img/icono_servicios.png';
 import imagenVivienda from './img/icono_hogar.png';
-import imagenOtros from './img/icono_otro.png';
+import imagenHogar from './img/icono_educacion.png';
 
 const selectImagenes = {
     Alimentacion: imagenAlimento,
@@ -22,7 +22,7 @@ const selectImagenes = {
     Educacion: imagenEducacion,
     Servicios: imagenServicios,
     Vivienda: imagenVivienda,
-    Otros : imagenOtros
+    Hogar: imagenHogar
 }
 const selectFecha = {
     Alimentacion: "13/06/2022",
@@ -34,10 +34,11 @@ const selectFecha = {
     Educacion: "13/06/2022",
     Servicios: "13/06/2022",
     Vivienda: "13/06/2022",
-    Otros: "13/06/2022"
+    Hogar: "13/06/2022"
 }
 
 const MiGasto = ({ gastando }) => {
+    
     return (
         <div className='miGasto'>
             <div className="gastos">
