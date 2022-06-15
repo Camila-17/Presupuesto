@@ -1,0 +1,6 @@
+.listaGastos h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}

@@ -15,8 +15,8 @@ export const IngresoPresupuesto = ({ presupuesto, setPresupuesto, setIrPresupues
     return (
         <div className='formulario' >
             <form className="padreFormulario" onSubmit={handleSubmit(onSubmit)}>
-                <label className="presupuesto" >Ingrese presupuesto</label>
-                <input className={`form-input ${errors.montoIngresado && "invalid"} `} type="number" id="presupuesto"
+                <label className="tituloCaja" >Difine presupuesto</label>
+                <input className={`form-input ${errors.montoIngresado && "invalid"} cajaIngreso ` } placeholder='Digite presupuesto a gestionar'  type="number" id="presupuesto"
                     {...register("montoIngresado", {
                         required: "presupuesto es requerido", min: {
                             value: 1, message: "Debe ingresar un numero positivo",
@@ -32,8 +32,8 @@ export const IngresoPresupuesto = ({ presupuesto, setPresupuesto, setIrPresupues
                         trigger("montoIngresado");
                     }}
                 />
-                {errors.montoIngresado && (<small>{errors.montoIngresado.message}</small>)}
-                <input type="submit" value="ingresar" />
+                {errors.montoIngresado && (<small className='error'>{errors.montoIngresado.message}</small>)}
+                <input className='botonIngreso' type="submit" value="Gestionar" />
             </form>
         </div>
     )

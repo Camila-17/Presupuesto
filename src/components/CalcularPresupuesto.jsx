@@ -19,9 +19,9 @@ const CalcularPresupuesto = ({ presupuesto, gastos, disponible, setDisponible, s
             )
         }
         {
-            presupuestoGastado == 0 ? (setCalcularPorcentaje(100)) : (
-                setCalcularPorcentaje(((datoIngresado - presupuestoGastado) / datoIngresado) * 100)
-            )
+            presupuestoGastado == 0 ? (setCalcularPorcentaje(0)) : (
+                setCalcularPorcentaje(((datoIngresado - (datoIngresado - presupuestoGastado)) / datoIngresado) * 100));
+
         }
 
 
@@ -29,7 +29,7 @@ const CalcularPresupuesto = ({ presupuesto, gastos, disponible, setDisponible, s
 
     }, [gastos])
     return (
-        <div>Calcular presupuesto</div>
+        <div></div>
     )
 }
 
