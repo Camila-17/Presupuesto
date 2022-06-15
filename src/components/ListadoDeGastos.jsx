@@ -10,8 +10,6 @@ const ListadoDeGastos = ({ gastos }) => {
                 {gastos.length ? "Lista Gastos" : "No hay Gastos"}
             </h1>
 
-     
-        
             {gastos.map((gastando, index) => (
                 <MiGasto
                     key={index}
