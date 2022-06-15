@@ -13,30 +13,34 @@ code {
 }
 
 /*--------------barra de libreria swipe------------*/
-/* .swipe-action__leading{
-   background-color: #00966B;
+.swipe-action__leading {
+  background-color: #00966B;
   color: var(--blanco);
-  margin-:200px; */
-/* }
-.swipe-action__trailing{
+
+  /* margin: 200px; */
+}
+
+.swipe-action__trailing {
   background-color: #db2777;
- 
-  color:var(--blanco);
-} */
-/* .swipeable-list .swipe-action{
-  display:flex;
-  justify-content:center;
-  align-items:center;
+
+  color: var(--blanco);
+}
+
+.swipeable-list .swipe-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 2.4rem;
-  text-align:right;
-} */
+  text-align: right;
+}
+
 /* .swipe-action__leading {
     background-color: var(--azul);
     color: var(--blanco);
     margin-bottom: 2rem;
-}
+} */
 
-.swipe-action__trailing {
+/* .swipe-action__trailing {
     background-color: #db2777;
     margin-bottom: 2rem;
     color: var(--blanco);
@@ -48,5 +52,4 @@ code {
     align-items: center;
     font-size: 2.4rem;
     text-align: right;
-} */
-
+}  */

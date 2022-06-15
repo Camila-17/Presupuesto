@@ -47,7 +47,7 @@ const MiGasto = ({ gastando, setEditar, gastoEliminado }) => {
         <LeadingActions>
             <SwipeAction onClick={() =>
                 setEditar({ gastando })}>
-                Editar Gasto
+                Editando Gasto
             </SwipeAction>
         </LeadingActions>
     )
