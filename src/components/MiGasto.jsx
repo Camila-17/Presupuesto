@@ -2,14 +2,14 @@ import React from 'react';
 import '../Style/MiGasto.css'
 
 import imagenAlimento from './img/icono_alimento.png';
-import imagenSalud from './img/icono_educacion.png';
-import imagenNeflix from './img/icono_vacaciones.png';
-import imagenAhorro from './img/icono_educacion.png';
-import imagenEntretenimiento from './img/icono_alimento.png';
+import imagenSalud from './img/icono_salud.png';
+import imagenNeflix from './img/icono_netflix.png';
+import imagenAhorro from './img/icono_ahorros.png';
+import imagenEntretenimiento from './img/icono_entretenimiento.png';
 import imagenVacaciones from './img/icono_vacaciones.png';
 import imagenEducacion from './img/icono_educacion.png';
-import imagenServicios from './img/icono_alimento.png';
-import imagenVivienda from './img/icono_vacaciones.png';
+import imagenServicios from './img/icono_servicios.png';
+import imagenVivienda from './img/icono_hogar.png';
 import imagenHogar from './img/icono_educacion.png';
 
 const selectImagenes = {
@@ -38,21 +38,21 @@ const selectFecha = {
 }
 
 const MiGasto = ({ gastando }) => {
+    
     return (
         <div className='miGasto'>
             <div className="gastos">
-                <div className="foto"> <h6>Foto</h6>
+                <div className="foto">
                     <img src={selectImagenes[gastando.tipo_gasto]} alt="foto-gastos" />
                 </div>
                 <div className="cantidadCategoria">
-                    <h6>Categoria</h6>
+                    <h6 className='categoria_nombre'>Categoria</h6>
                     <h4> {gastando.tipo_gasto} </h4>
-                    <h6>Fecha</h6>
-                    <h6>{`${selectFecha[gastando.tipo_gasto]}`}</h6>
+                    <h5 className='fecha'> Agregado:{`${selectFecha[gastando.tipo_gasto]}`}</h5>
                 </div >
 
                 <div className="total">
-                    <h5> $ {gastando.cantidad_presupuesto}</h5>
+                    <h4> $ {gastando.cantidad_presupuesto}</h4>
                 </div>
             </div>
         </div>
