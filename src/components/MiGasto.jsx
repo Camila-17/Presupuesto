@@ -1,13 +1,13 @@
 import React from 'react';
 import '../Style/MiGasto.css'
-import {
-    LeadingActions,
-    SwipeableList,
-    SwipeableListItem,
-    SwipeAction,
-    TrailingActions,
-} from 'react-swipeable-list';
-import 'react-swipeable-list/dist/styles.css';
+// import {
+//     LeadingActions,
+//     SwipeableList,
+//     SwipeableListItem,
+//     SwipeAction,
+//     TrailingActions,
+// } from 'react-swipeable-list';
+// import 'react-swipeable-list/dist/styles.css';
 
 import imagenAlimento from './img/icono_alimento.png';
 import imagenSalud from './img/icono_salud.png';
