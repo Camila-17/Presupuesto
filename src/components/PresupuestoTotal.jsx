@@ -7,7 +7,8 @@ import "react-circular-progressbar/dist/styles.css";
 
 import ListadoDeGastos from './ListadoDeGastos';
 
-export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTotal, gastos, disponible, gastado, calcularPorcentaje }) => {
+export const PresupuestoTotal = ({ presupuesto, setAbrirModal,
+    irPresupuestoTotal, gastos, disponible, gastado, calcularPorcentaje, setEditar, gastoEliminado }) => {
     const { montoIngresado } = presupuesto;
 
 
@@ -63,6 +64,9 @@ export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTota
                     <div>
                         <ListadoDeGastos
                             gastos={gastos}
+                            setEditar={setEditar}
+                            gastoEliminado={gastoEliminado}
+
                         />
                     </div>
                 )}

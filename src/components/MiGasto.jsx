@@ -1,14 +1,9 @@
 import React from 'react';
-import '../Style/MiGasto.css'
-import {
-    LeadingActions,
-    SwipeableList,
-    SwipeableListItem,
-    SwipeAction,
-    TrailingActions,
-} from 'react-swipeable-list';
-//import 'react-swipeable-list/dist/styles.css';
-import 'react-swipeable-list/dist/sty';
+import '../Style/MiGasto.css';
+import { LeadingActions, SwipeableList, SwipeableListItem, SwipeAction, TrailingActions, } from 'react-swipeable-list';
+import 'react-swipeable-list/dist/styles.css';
+// import 'react-swipeable-list/dist/sty';
+
 import imagenAlimento from './img/icono_alimento.png';
 import imagenSalud from './img/icono_salud.png';
 import imagenNeflix from './img/icono_netflix.png';
@@ -33,42 +28,37 @@ const selectImagenes = {
     Hogar: imagenHogar
 }
 const selectFecha = {
-    Alimentacion: "13/06/2022",
-    Salud: "13/06/2022",
-    Netflix: "13/06/2022",
-    Ahorro: "13/06/2022",
-    Entretenimiento: "13/06/2022",
-    Vacaciones: "13/06/2022",
-    Educacion: "13/06/2022",
-    Servicios: "13/06/2022",
-    Vivienda: "13/06/2022",
-    Hogar: "13/06/2022"
+    Alimentacion: "15/06/2022",
+    Salud: "15/06/2022",
+    Netflix: "15/06/2022",
+    Ahorro: "15/06/2022",
+    Entretenimiento: "15/06/2022",
+    Vacaciones: "15/06/2022",
+    Educacion: "15/06/2022",
+    Servicios: "15/06/2022",
+    Vivienda: "15/06/2022",
+    Hogar: "15/06/2022"
 }
 
 
+const MiGasto = ({ gastando, setEditar, gastoEliminado }) => {
 
-const MiGasto = ({ gastando }) => {
-
-     //Izquierda
-    const leadingActions  = () => (
-        <LeadingActions >
-            <SwipeAction className="hola" onClick={() => console.log('swipe action triggered')}>
-                Editar
+    const leadingActions = () => (
+        <LeadingActions>
+            <SwipeAction onClick={() =>
+                setEditar({ gastando })}>
+                Editando Gasto
             </SwipeAction>
         </LeadingActions>
-    );
-
-    //Derecha
+    )
     const trailingActions = () => (
         <TrailingActions>
-            <SwipeAction
-                destructive={true}
-                onClick={() => console.log('swipe action triggered')}>
-                Eliminar               
+            <SwipeAction onClick={() => gastoEliminado(gastando.idUnica)}>
+                Eliminando Gasto
             </SwipeAction>
-            
         </TrailingActions>
-    );
+    )
+
 
     return (
         <SwipeableList>
@@ -78,6 +68,7 @@ const MiGasto = ({ gastando }) => {
             >
                 <div className='miGasto'>
                     <div className="gastos">
+
                         <div className="foto">
                             <img src={selectImagenes[gastando.tipo_gasto]} alt="foto-gastos" />
                         </div>
@@ -95,9 +86,8 @@ const MiGasto = ({ gastando }) => {
                         </div>
                     </div>
                 </div>
-
-            </SwipeableListItem>
-        </SwipeableList>
+            </SwipeableListItem >
+        </SwipeableList >
     )
 }
 
