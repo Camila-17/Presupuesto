@@ -3,7 +3,7 @@
     height: 100vh;
     background-color: rgba(200, 200, 200);
     display: flex;
-    position: fixed;
+    position: flex;
     justify-content: center;
     align-items: center;
 }
