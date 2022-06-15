@@ -1,5 +1,13 @@
 import React from 'react';
 import '../Style/MiGasto.css'
+import {
+    LeadingActions,
+    SwipeableList,
+    SwipeableListItem,
+    SwipeAction,
+    TrailingActions,
+} from 'react-swipeable-list';
+import 'react-swipeable-list/dist/styles.css';
 
 import imagenAlimento from './img/icono_alimento.png';
 import imagenSalud from './img/icono_educacion.png';
@@ -52,10 +60,10 @@ const MiGasto = ({ gastando }) => {
                 </div >
 
                 <div className="total">
-                    <h5> $ {gastando.cantidad_presupuesto}</h5>
+                   <h5> $ {gastando.cantidad_presupuesto}</h5>
                 </div>
             </div>
-        </div>
+        </div> 
     )
 }
 

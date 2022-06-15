@@ -6,9 +6,6 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import "react-circular-progressbar/dist/styles.css"
 import ListadoDeGastos from './ListadoDeGastos';
 
-//import { Pie } from 'react-chartjs-2';
-
-
 export const PresupuestoTotal = ({ presupuesto, setAbrirModal, irPresupuestoTotal, gastos, disponible, gastado, calcularPorcentaje }) => {
     const { montoIngresado } = presupuesto;
 
