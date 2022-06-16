@@ -47,14 +47,14 @@ const MiGasto = ({ gastando, setEditar, gastoEliminado }) => {
         <LeadingActions>
             <SwipeAction onClick={() =>
                 setEditar({ gastando })}>
-                Editando Gasto
+                Editar Gasto
             </SwipeAction>
         </LeadingActions>
     )
     const trailingActions = () => (
         <TrailingActions>
             <SwipeAction onClick={() => gastoEliminado(gastando.idUnica)}>
-                Eliminando Gasto
+                Eliminar Gasto
             </SwipeAction>
         </TrailingActions>
     )
