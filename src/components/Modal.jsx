@@ -4,12 +4,12 @@ import { useForm } from 'react-hook-form';
 import { GASTOS } from '../constans';
 
 
-const Modal = ({ closeModal, nuevoGasto, editar, setEditar, setModoEdicion }) => {
+const Modal = ({ closeModal, nuevoGasto, editar,modoEdicion, setIdEditar }) => {
 
     const [nombreGasto, setNombreGasto] = useState("");
     const [cantidadGasto, setCanticadGasto] = useState("");
     const [tipoGasto, setTipoGasto] = useState("");
-    const [idEditar, setIdEditar] = useState("");
+
 
     const { register, formState: { errors }, handleSubmit } = useForm()
 
@@ -38,9 +38,12 @@ const Modal = ({ closeModal, nuevoGasto, editar, setEditar, setModoEdicion }) =>
 
                 </div>
                 <div className='title'>
-                    <h1 className='titleH1'>
+                    {modoEdicion?( <h1 className='titleH1'>
+                        Editar Gasto
+                    </h1>):( <h1 className='titleH1'>
                         Agregar Gasto
-                    </h1>
+                    </h1>)}
+                   
 
                 </div>
 
@@ -95,8 +98,9 @@ const Modal = ({ closeModal, nuevoGasto, editar, setEditar, setModoEdicion }) =>
                             </select>
                         </div>
                         <div className='footer'>
-
-                            <button className='boton' type='submit' value='Enviar'><span>Agregar Gasto</span></button>
+{modoEdicion?(<button className='boton' type='submit' value='Enviar'><span>Actualizar Gasto</span></button>):
+(<button className='boton' type='submit' value='Enviar'><span>Agregar Gasto</span></button>)}
+                            
                         </div>
 
                     </form>

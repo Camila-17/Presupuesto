@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import { obtenerId } from './constans/id_fecha';
-import Grafica from './components/Grafica';
-import Header from './components/Header';
 import IngresoPresupuesto from './components/IngresoPresupuesto';
 import PresupuestoTotal from './components/PresupuestoTotal';
 import Modal from './components/Modal';
@@ -20,8 +18,9 @@ function App() {
   const [calcularPorcentaje, setCalcularPorcentaje] = useState(100);
   const [editar, setEditar] = useState({});
   const [modoEdicion, setModoEdicion] = useState(false);
+  const [idEditar, setIdEditar] = useState("");
 
-
+//se activa con onClick editar
   useEffect(() => {
     if (Object.keys(editar).length > 0) {
       setAbrirModal(true);
@@ -29,26 +28,31 @@ function App() {
     }
   }, [editar]);
 
+  //elimina elemento seleccionado;
   const gastoEliminado = (idEliminar) => {
-    const actualizarGastos = gastos.filter(gasto => gasto.idUnica !== idEliminar)
-    console.log(actualizarGastos);
+    const actualizarGastos = gastos.filter(gasto => gasto.idUnica !== idEliminar);
     setGastos(actualizarGastos);
   }
+//se activa con la linea 47 (App.js), adjunta la idUnica al elemento editado;
+  const gastoEditado = (editado) => {
+const adjuntarIdUnica ={idUnica: idEditar} 
+const objetoEditado=Object.assign(editado,adjuntarIdUnica);
+return(objetoEditado);
+  }
 
+  //ingresa nuevos objetos al arreglo gastos[] o edita;
   const nuevoGasto = (gasto) => {
     if (modoEdicion == true) {
-      //actualizar gastos
+      //edita el objeto seleccionado;
       const actualizarGastos = gastos.map(item =>
-        item.idUnica != gasto.idUnica ? gasto : item)
+        item.idUnica === idEditar ? gastoEditado(gasto) : item);
       setGastos(actualizarGastos);
-      console.log(actualizarGastos)
-      console.log(gasto);
       setEditar({});
       setModoEdicion(false);
     } else {
-      //nuevo gasto
+      //ingresa nuevo gasto;
       gasto.idUnica = obtenerId();
-      setGastos([...gastos, gasto])
+      setGastos([...gastos, gasto]);
     }
   }
 
@@ -56,7 +60,7 @@ function App() {
   return (
     <div className="App">
 
-      <Header />
+
       <CalcularPresupuesto
         presupuesto={presupuesto}
         gastos={gastos}
@@ -69,8 +73,9 @@ function App() {
       />
       {abrirModal && (<Modal nuevoGasto={nuevoGasto} closeModal={setAbrirModal}
         editar={editar} modoEdicion={modoEdicion} setModoEdicion={setModoEdicion}
+        idEditar={idEditar} setIdEditar={setIdEditar}
       />)}
-      {/* {abrirModal && (setEditar({}))} */}
+
       {irPresupuestoTotal ? (
         <>
 
